@@ -15,7 +15,7 @@ type Client struct {
 	ReqModifiers []func(*http.Request)
 }
 
-func NewHttpClient(baseURL string) *Client {
+func New(baseURL string) *Client {
 	parsedURL, err := url.Parse(baseURL)
 	if err != nil {
 		log.Println(fmt.Sprintf("Error parsing URL: %s", baseURL), err)
@@ -38,7 +38,7 @@ func (c *Client) SetHeader(key, value string) *Client {
 	return c
 }
 
-func (c *Client) SetHeaders(headers *http.Header) *Client {
+func (c *Client) SetHeadersFromObject(headers *http.Header) *Client {
 	for k, v := range *headers {
 		c.SetHeader(k, v[0])
 	}
