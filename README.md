@@ -1,10 +1,13 @@
 # Go HTTP Client
 
-This repository contains a Go package that provides a flexible and easy-to-use HTTP client for making HTTP requests. The client allows you to set headers, configure request modifiers, and send requests to a given URL. The idea is to provide you with chainable functions that make it easy to call HTTP requests, especially if you are familiar with the `Fetch API` in the JavaScript world, which I personally love for its simplicity.
+This repository contains a Go package that provides a flexible and easy-to-use HTTP client for making HTTP requests. The client allows you to set headers, configure request modifiers, and send requests to a given URL.
+
+The idea is to provide you with chainable functions that make it easy to call HTTP requests, especially if you are familiar with the `Fetch API` in the JavaScript world, which I personally love for its simplicity.
 
 ## Features
 
 - Set headers: You can easily set custom headers for your HTTP requests.
+- Set the base URL: Create a base URL for your client instance so you can shorten the API URL string and reduce the repetition of the URL pattern.
 - Request modifiers: You can add request modifiers, such as modifying the request body or performing custom operations on the request before sending it.
 - Flexible configuration: The client allows you to configure the base URL and customize the underlying HTTP client.
 
